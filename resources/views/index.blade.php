@@ -14,7 +14,7 @@
             logo: '{{ env('APP_LOGO') }}',
             url: '{{ env('APP_URL') }}',
             csrf: '{{ csrf_token() }}',
-            defaultLocale: '{{ env('APP_LOCALE', 'en') }}',
+            defaultLocale: '{{ env('APP_LOCALE', 'vi') }}',
             defaultTimezone: '{{ env('APP_TIMEZONE', 'UTC') }}',
             locales: {
                 vi: {!! json_encode(\Illuminate\Support\Facades\Lang::get('frontend', [], 'vi')) !!},

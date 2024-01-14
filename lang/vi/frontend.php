@@ -51,6 +51,7 @@ return [
     "global" => [
         "pages" => [
             "home" => "Dashboard",
+            'category' => 'Categories',
             "users" => "Users",
             "users_create" => "New User",
             "users_edit" => "Edit User",
