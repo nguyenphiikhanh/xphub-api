@@ -149,24 +149,24 @@ const routes = [
         meta: {requiresAuth: false, isPublicAuthPage: true},
         component: PageLogin,
     },
-    {
-        path: "/register",
-        name: "register",
-        meta: {requiresAuth: false, isPublicAuthPage: true},
-        component: PageRegister,
-    },
-    {
-        path: "/reset-password",
-        name: "resetPassword",
-        meta: {requiresAuth: false, isPublicAuthPage: true},
-        component: PageResetPassword,
-    },
-    {
-        path: "/forgot-password",
-        name: "forgotPassword",
-        meta: {requiresAuth: false, isPublicAuthPage: true},
-        component: PageForgotPassword,
-    },
+    // {
+    //     path: "/register",
+    //     name: "register",
+    //     meta: {requiresAuth: false, isPublicAuthPage: true},
+    //     component: PageRegister,
+    // },
+    // {
+    //     path: "/reset-password",
+    //     name: "resetPassword",
+    //     meta: {requiresAuth: false, isPublicAuthPage: true},
+    //     component: PageResetPassword,
+    // },
+    // {
+    //     path: "/forgot-password",
+    //     name: "forgotPassword",
+    //     meta: {requiresAuth: false, isPublicAuthPage: true},
+    //     component: PageForgotPassword,
+    // },
     {
         path: "/:catchAll(.*)",
         name: "notFound",
