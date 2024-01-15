@@ -5,16 +5,16 @@
             <Filters @clear="onFiltersClear">
                 <FiltersRow>
                     <FiltersCol>
-                        <TextInput name="first_name" :label="trans('categories.labels.first_name')" v-model="mainQuery.filters.first_name.value"></TextInput>
+                        <TextInput name="first_name" :label="trans('users.labels.first_name')" v-model="mainQuery.filters.first_name.value"></TextInput>
                     </FiltersCol>
                     <FiltersCol>
-                        <TextInput name="last_name" :label="trans('categories.labels.last_name')" v-model="mainQuery.filters.last_name.value"></TextInput>
+                        <TextInput name="last_name" :label="trans('users.labels.last_name')" v-model="mainQuery.filters.last_name.value"></TextInput>
                     </FiltersCol>
                     <FiltersCol>
-                        <TextInput name="email" type="email" :label="trans('categories.labels.email')" v-model="mainQuery.filters.email.value"></TextInput>
+                        <TextInput name="email" type="email" :label="trans('users.labels.email')" v-model="mainQuery.filters.email.value"></TextInput>
                     </FiltersCol>
                     <FiltersCol>
-                        <Dropdown name="role" server="roles/search" :multiple="true" :label="trans('categories.labels.role')" v-model="mainQuery.filters.role.value"></Dropdown>
+                        <Dropdown name="role" server="roles/search" :multiple="true" :label="trans('users.labels.role')" v-model="mainQuery.filters.role.value"></Dropdown>
                     </FiltersCol>
                 </FiltersRow>
             </Filters>
@@ -33,14 +33,14 @@
                                 {{ props.item.full_name }}
                             </div>
                             <div class="text-sm text-gray-500">
-                                {{ trans('categories.labels.id') + ': ' + props.item.id }}
+                                {{ trans('users.labels.id') + ': ' + props.item.id }}
                             </div>
                         </div>
                     </div>
                 </template>
                 <template v-slot:content-status="props">
-                    <span v-if="props.item.email_verified_at" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800" v-html="trans('categories.status.verified')"></span>
-                    <span v-else class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800" v-html="trans('categories.status.not_verified')"></span>
+                    <span v-if="props.item.email_verified_at" class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800" v-html="trans('users.status.verified')"></span>
+                    <span v-else class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800" v-html="trans('users.status.not_verified')"></span>
                 </template>
                 <template v-slot:content-role="props">
                     {{
@@ -112,11 +112,11 @@ export default defineComponent({
 
         const page = reactive({
             id: 'list_users',
-            title: trans('global.pages.categories'),
+            title: trans('global.pages.users'),
             breadcrumbs: [
                 {
-                    name: trans('global.pages.categories'),
-                    to: toUrl('/categories'),
+                    name: trans('global.pages.users'),
+                    to: toUrl('/users'),
                     active: true,
                 }
             ],
@@ -131,7 +131,7 @@ export default defineComponent({
                     id: 'new',
                     name: trans('global.buttons.add_new'),
                     icon: "fa fa-plus",
-                    to: toUrl('/categories/create')
+                    to: toUrl('/users/create')
                 }
             ],
             toggleFilters: false,
@@ -139,12 +139,12 @@ export default defineComponent({
 
         const table = reactive({
             headers: {
-                id: trans('categories.labels.id_pound'),
-                first_name: trans('categories.labels.first_name'),
-                last_name: trans('categories.labels.last_name'),
-                email: trans('categories.labels.email'),
-                status: trans('categories.labels.status'),
-                role: trans('categories.labels.role'),
+                id: trans('users.labels.id_pound'),
+                first_name: trans('users.labels.first_name'),
+                last_name: trans('users.labels.last_name'),
+                email: trans('users.labels.email'),
+                status: trans('users.labels.status'),
+                role: trans('users.labels.role'),
             },
             sorting: {
                 first_name: true,
@@ -160,7 +160,7 @@ export default defineComponent({
                     name: trans('global.actions.edit'),
                     icon: "fa fa-edit",
                     showName: false,
-                    to: toUrl('/categories/{id}/edit')
+                    to: toUrl('/users/{id}/edit')
                 },
                 delete: {
                     id: 'delete',

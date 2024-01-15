@@ -11,6 +11,19 @@ import {default as PageUsers} from "@/views/pages/private/users/Index";
 import {default as PageUsersCreate} from "@/views/pages/private/users/Create";
 import {default as PageUsersEdit} from "@/views/pages/private/users/Edit";
 
+//categories
+import {default as PageCategories} from "@/views/pages/private/categories/Index";
+import {default as PageCategoriesCreate} from "@/views/pages/private/categories/Create";
+import {default as PageCategoriesEdit} from "@/views/pages/private/categories/Edit";
+//tags
+import {default as PageTags} from "@/views/pages/private/tags/Index";
+import {default as PageTagsCreate} from "@/views/pages/private/tags/Create";
+import {default as PageTagsEdit} from "@/views/pages/private/tags/Edit";
+//posts
+import {default as PagePosts} from "@/views/pages/private/posts/Index";
+import {default as PagePostsCreate} from "@/views/pages/private/posts/Create";
+import {default as PagePostsEdit} from "@/views/pages/private/posts/Edit";
+
 import abilities from "@/stub/abilities";
 
 const routes = [
@@ -56,6 +69,75 @@ const routes = [
                         path: ":id/edit",
                         meta: {requiresAuth: true, requiresAbility: abilities.EDIT_USER},
                         component: PageUsersEdit,
+                    },
+                ]
+            },
+            {
+                path: "category",
+                children: [
+                    {
+                        name: "category.list",
+                        path: "list",
+                        meta: {requiresAuth: true},
+                        component: PageCategories,
+                    },
+                    {
+                        name: "category.create",
+                        path: "create",
+                        meta: {requiresAuth: true},
+                        component: PageCategoriesCreate,
+                    },
+                    {
+                        name: "category.edit",
+                        path: ":id/edit",
+                        meta: {requiresAuth: true},
+                        component: PageCategoriesEdit,
+                    },
+                ]
+            },
+            {
+                path: "tag",
+                children: [
+                    {
+                        name: "tag.list",
+                        path: "list",
+                        meta: {requiresAuth: true},
+                        component: PageTags,
+                    },
+                    {
+                        name: "tag.create",
+                        path: "create",
+                        meta: {requiresAuth: true},
+                        component: PageTagsCreate,
+                    },
+                    {
+                        name: "tag.edit",
+                        path: ":id/edit",
+                        meta: {requiresAuth: true},
+                        component: PageTagsEdit,
+                    },
+                ]
+            },
+            {
+                path: "post",
+                children: [
+                    {
+                        name: "post.list",
+                        path: "list",
+                        meta: {requiresAuth: true},
+                        component: PagePosts,
+                    },
+                    {
+                        name: "post.create",
+                        path: "create",
+                        meta: {requiresAuth: true},
+                        component: PagePostsCreate,
+                    },
+                    {
+                        name: "post.edit",
+                        path: ":id/edit",
+                        meta: {requiresAuth: true},
+                        component: PagePostsEdit,
                     },
                 ]
             },

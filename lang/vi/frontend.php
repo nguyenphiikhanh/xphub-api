@@ -45,13 +45,49 @@ return [
             "avatar_settings" => "Avatar Settings",
         ]
     ],
+    "categories" => [
+        "status" => [
+            "verified" => "Verified",
+            "not_verified" => "Not verified",
+            "ask_verify" => "Verify Email"
+        ],
+        "roles" => [
+            "regular" => "Regular",
+            "admin" => "Admin"
+        ],
+        "labels" => [
+            "id" => "ID",
+            "id_pound" => "#",
+            "first_name" => "First name",
+            "last_name" => "Last name",
+            "middle_name" => "Middle name",
+            "name" => "Name",
+            "avatar" => "Avatar",
+            "email" => "Email",
+            "role" => "Role",
+            "roles" => "Roles",
+            "status" => "Status",
+            "current_password" => "Current Password",
+            "password" => "Password",
+            "new_password" => "New Password",
+            "confirm_password" => "Confirm Password",
+            "ask_upload_avatar" => "Upload Avatar",
+            "new_record" => "New User",
+            "edit_record" => "Edit User",
+            "general_settings" => "General Settings",
+            "password_settings" => "Password Settings",
+            "avatar_settings" => "Avatar Settings",
+        ]
+    ],
     "messages" => [
         "name" => "Message"
     ],
     "global" => [
         "pages" => [
             "home" => "Dashboard",
-            'category' => 'Categories',
+            'categories' => 'Categories',
+            'tags' => 'Tags',
+            "posts" => "Posts",
             "users" => "Users",
             "users_create" => "New User",
             "users_edit" => "Edit User",
